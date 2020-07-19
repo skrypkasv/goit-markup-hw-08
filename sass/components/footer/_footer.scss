@@ -1,0 +1,99 @@
+footer {
+  background-color: $footerBGColr;
+}
+
+.under {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.container .under {
+  padding: 48px 0px 28px;
+  border-bottom: 1px solid $footerBdrColr;
+}
+
+address {
+  font-style: inherit;
+}
+
+.location {
+  display: inline-block;
+  margin-top: 10px;
+  color: $primaryWhiteColr;
+}
+
+.coordinates .mail,
+.coordinates .tel {
+  display: block;
+  margin-top: 9px;
+  padding: 0px;
+}
+
+.join {
+  width: 206px;
+  // background-color: aquamarine;
+}
+.subscribe {
+  display: flex;
+  align-items: flex-end;
+  width: 570px;
+  // background-color: aquamarine;
+}
+.call {
+  display: block;
+  margin-bottom: 20px;
+  color: $primaryWhiteColr;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.join .list.social {
+  display: flex;
+  justify-content: center;
+
+  & > .item:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+// Подпишитесь на рассылку
+.subscribe-field {
+  display: inline-block;
+  margin-right: 12px;
+  padding: 15px 16px;
+  width: 358px;
+  height: 50px;
+
+  background-color: $footerBGColr;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: $primaryTxtColr;
+
+  &:focus,
+  &:active {
+    outline: transparent;
+    border: 1px solid $accentColr;
+  }
+}
+
+// Copyright
+.copyright {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 18px;
+  padding-bottom: 20px;
+
+  color: $primaryTxtColr;
+
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  line-height: 2;
+}

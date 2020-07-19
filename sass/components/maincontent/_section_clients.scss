@@ -1,0 +1,46 @@
+// Постоянные клиенты
+.list.companies {
+  display: flex;
+
+  & > .item {
+    display: block;
+    width: calc((100% - 150px) / 6);
+    height: 90px;
+    background-color: $primaryWhiteColr;
+    border: 1px solid $sectClientsBdrColr;
+    border-radius: 4px;
+    text-align: center;
+
+    transition: border 250ms $timeFunction;
+  }
+
+  & > .item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  & > .item:hover,
+  & > .item:focus {
+    border: 1px solid $accentColr;
+  }
+}
+
+.companies .link {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: $sectClientsBdrColr;
+  background-color: transparent;
+}
+
+.client-icon {
+  margin: auto;
+  fill: currentColor;
+
+  transition: fill 250ms $timeFunction;
+
+  .companies .link:hover &,
+  .companies .link:focus & {
+    fill: $accentColr;
+  }
+}

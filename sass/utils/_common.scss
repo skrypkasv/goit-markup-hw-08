@@ -1,0 +1,121 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  color: $primaryTxtColr;
+  background-color: $primaryWhiteColr;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  line-height: 1.7;
+}
+
+.list {
+  list-style: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding: 0 15px;
+  //   outline: 1px solid navy;
+  .section & {
+    padding: 94px 15px;
+    // outline: 1px solid tomato;
+  }
+}
+
+// ❗ VISUALLYHIDDEN ⬇ ❗
+.invisible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  /* position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+}
+
+// Заголовки и подзаголовки секций
+.section {
+  &-title {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    color: $secondTxtColr;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+  }
+  &-subtitle {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: $secondTxtColr;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+}
+// Ссылки на соцсети (общие)
+.social .link {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: $socLinkCardColr;
+  /* background-color: tomato; */
+
+  transition: background-color 250ms $timeFunction;
+  &:hover,
+  &:focus {
+    background-color: $accentColr;
+  }
+}
+// Ссылки на соцсети (для карточек команды)
+.icon-link {
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+
+  transition: fill 250ms $timeFunction;
+
+  .social .link:hover &,
+  .social .link:focus & {
+    fill: $primaryWhiteColr;
+  }
+}
+// Ссылки на соцсети (для футера)
+.join .link {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: $footerBdrColr;
+
+  & .icon-link {
+    fill: $primaryWhiteColr;
+  }
+}
