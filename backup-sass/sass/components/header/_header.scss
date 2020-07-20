@@ -1,0 +1,11 @@
+@import './logo';
+@import './site-nav';
+header {
+  border-bottom: 1px solid $BdrColr;
+}
+nav.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  // background-color: teal;
+}

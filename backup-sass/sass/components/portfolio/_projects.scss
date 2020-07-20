@@ -1,0 +1,81 @@
+// История проектов portfolio
+.project {
+  display: flex;
+  flex-wrap: wrap;
+
+  & .item {
+    display: block;
+    width: calc((100% - 60px) / 3);
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border: 1px solid $projectBdrColr;
+    transition: box-shadow 250ms $timeFunction;
+  }
+
+  & .item:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+
+  & .item:hover,
+  & .item:focus {
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.project .link {
+  display: block;
+  box-sizing: border-box;
+}
+
+.project-title {
+  margin: 20px 24px 4px;
+  color: $secondTxtColr;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.project-category {
+  margin: 0px 24px;
+  color: $primaryTxtColr;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+}
+.project img {
+  display: block;
+}
+
+// Анимация на картинке
+.relative-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.description {
+  position: absolute;
+  bottom: 0;
+
+  display: block;
+  margin: 0px;
+  padding: 63px 24px;
+  width: 100%;
+  height: 100%;
+
+  background-color: $accentColr;
+  opacity: 0.9;
+
+  font-size: 18px;
+  line-height: 1.56;
+  color: $primaryWhiteColr;
+
+  transform: translateY(100%);
+  transition: transform 250ms $timeFunction;
+}
+
+.project .item:hover .description,
+.project .item:focus .description {
+  transform: translateY(0%);
+}
