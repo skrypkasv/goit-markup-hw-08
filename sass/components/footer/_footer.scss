@@ -13,7 +13,7 @@ footer {
   border-bottom: 1px solid $footerBdrColr;
 }
 
-address {
+.address {
   font-style: inherit;
 }
 
@@ -23,11 +23,29 @@ address {
   color: $primaryWhiteColr;
 }
 
-.coordinates .mail,
-.coordinates .tel {
+%addresslink {
   display: block;
   margin-top: 9px;
   padding: 0px;
+
+  color: $primaryTxtColr;
+  text-decoration: none;
+
+  transition: color 250ms $timeFunction;
+}
+.address .mail {
+  @extend %addresslink;
+  &:hover,
+  &:focus {
+    color: $accentColr;
+  }
+}
+.address .tel {
+  @extend %addresslink;
+  &:hover,
+  &:focus {
+    color: $accentColr;
+  }
 }
 
 .join {

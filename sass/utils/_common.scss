@@ -17,6 +17,9 @@ body {
   letter-spacing: 0.03em;
   line-height: 1.7;
 }
+body.modal-open {
+  overflow: hidden;
+}
 
 .list {
   list-style: none;

@@ -21,6 +21,10 @@ body {
   line-height: 1.7;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .list {
   list-style: none;
   margin-top: 0px;
@@ -219,13 +223,13 @@ body {
 }
 
 .logo {
-  display: block;
+  display: inline-block;
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 0px;
   font-family: Raleway;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.2;
   text-decoration: none;
 }
@@ -242,8 +246,180 @@ body {
   color: #ffffff;
 }
 
-.site-nav {
+header .container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 60px;
+}
+
+.menu-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.icon-cross,
+.icon-menu {
+  display: inline-block;
+  margin: auto;
+  fill: currentColor;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-button:hover .icon-menu,
+.menu-button:hover .icon-cross {
+  fill: #2196f3;
+}
+
+.menu-button:focus,
+.menu-button:focus {
+  outline: transparent;
+  border: 1px solid #2196f3;
+}
+
+.menu-button .icon-cross {
   display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.nav-menu {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
+}
+
+.nav-menu.is-open {
+  display: block;
+}
+
+.site-nav {
+  display: block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  line-height: 1.14;
+}
+
+.site-nav .item:not(:first-child) {
+  padding-top: 40px;
+}
+
+.site-nav .link {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 8px;
+  color: #212121;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-nav .link:hover, .site-nav .link:focus {
+  color: #2196f3;
+}
+
+.site-nav .link.current {
+  position: relative;
+  color: #2196f3;
+}
+
+.site-nav .link.current::after {
+  position: absolute;
+  content: '';
+  display: block;
+  bottom: 0px;
+  width: 100%;
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
+}
+
+.mail, .tel {
+  padding-bottom: 0;
+  color: #757575;
+  text-decoration: none;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mail {
+  padding-top: 52px;
+}
+
+.mail:hover, .mail:focus {
+  color: #2196f3;
+}
+
+.site-nav .mail {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tel {
+  padding-top: 16px;
+}
+
+.tel:hover, .tel:focus {
+  color: #2196f3;
+}
+
+.site-nav .tel {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.mail .nav-icon {
+  width: 16px;
+  height: 11.2px;
+}
+
+.tel .nav-icon {
+  width: 10px;
+  height: 15px;
 }
 
 header {
@@ -484,7 +660,7 @@ footer {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-address {
+.address {
   font-style: inherit;
 }
 
@@ -494,11 +670,22 @@ address {
   color: #ffffff;
 }
 
-.coordinates .mail,
-.coordinates .tel {
+.address .mail, .address .tel {
   display: block;
   margin-top: 9px;
   padding: 0px;
+  color: #757575;
+  text-decoration: none;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address .mail:hover, .address .mail:focus {
+  color: #2196f3;
+}
+
+.address .tel:hover, .address .tel:focus {
+  color: #2196f3;
 }
 
 .join {
@@ -568,8 +755,8 @@ address {
 
 .close-modal {
   position: absolute;
-  top: -9px;
-  right: -9px;
+  top: 8px;
+  right: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -706,8 +893,8 @@ address {
 .checkbox-icon {
   display: block;
   margin-right: 8px;
-  width: 15px;
-  height: 15px;
+  min-width: 15px;
+  min-height: 15px;
   border: 0.75px solid #212121;
   border-radius: 2px;
 }
@@ -725,6 +912,8 @@ address {
 }
 
 .check-text {
+  font-size: 12px;
+  line-height: 1.16;
   color: #757575;
 }
 
@@ -738,7 +927,9 @@ address {
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 94px 15px;
   background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
   opacity: 1;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -755,24 +946,18 @@ address {
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 530px;
+  position: relative;
+  max-width: 450px;
   min-height: 580px;
   padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 4px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
   text-align: center;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
   opacity: 1;
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .keys {
