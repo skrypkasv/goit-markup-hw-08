@@ -2,9 +2,10 @@
 
 .keys {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   & .item {
-    padding-bottom: 20px;
+    padding-bottom: 15px;
   }
   & .item:not(:last-child) {
     margin-right: 8px;

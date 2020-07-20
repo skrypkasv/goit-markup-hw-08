@@ -1,20 +1,30 @@
 // История проектов portfolio
 .project {
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
+  display: block;
 
   & .item {
     display: block;
-    width: calc((100% - 60px) / 3);
+    width: 100%;
+    // width: calc((100% - 60px) / 3);
     margin-top: 30px;
     padding-bottom: 20px;
     border: 1px solid $projectBdrColr;
     transition: box-shadow 250ms $timeFunction;
+    background-color: orange;
+  }
+  & .item:first-child {
+    margin-top: 25px;
   }
 
-  & .item:not(:nth-child(3n)) {
-    margin-right: 30px;
+  & .item:not(:last-child) {
+    margin-bottom: 30px;
   }
+
+  // & .item:not(:nth-child(3n)) {
+  //   margin-right: 30px;
+  // }
 
   & .item:hover,
   & .item:focus {
@@ -56,6 +66,7 @@
 }
 .description {
   position: absolute;
+  z-index: 1;
   bottom: 0;
 
   display: block;

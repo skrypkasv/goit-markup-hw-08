@@ -1,6 +1,9 @@
 // Панель навигации
-header .container {
+header {
   position: relative;
+}
+
+header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,6 +46,7 @@ header .container {
 }
 .nav-menu {
   position: absolute;
+  z-index: 99;
 
   display: none;
 
