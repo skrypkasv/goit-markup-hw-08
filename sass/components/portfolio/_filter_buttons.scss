@@ -4,6 +4,10 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
   & .item {
     padding-bottom: 15px;
   }

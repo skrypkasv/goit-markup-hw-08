@@ -1,11 +1,22 @@
 @import './logo';
-@import './site-nav';
+@import './menu-button';
+@import './nav-menu';
+@import './mail-tel';
+
 header {
+  position: relative;
   border-bottom: 1px solid $BdrColr;
 }
-// nav.container {
-// display: flex;
-// justify-content: flex-start;
-// align-items: center;
-// background-color: teal;
-// }
+
+header .container {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  max-height: 80px;
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: flex-start;
+  }
+}

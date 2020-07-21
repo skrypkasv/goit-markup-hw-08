@@ -1,0 +1,39 @@
+// Кнопка открытия/закрытия nav-menu
+.menu-button {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.icon-cross,
+.icon-menu {
+  display: inline-block;
+  margin: auto;
+  fill: currentColor;
+
+  transition: fill 250ms $timeFunction;
+}
+.menu-button:hover .icon-menu,
+.menu-button:hover .icon-cross {
+  fill: $accentColr;
+}
+.menu-button:focus,
+.menu-button:focus {
+  outline: transparent;
+  border: 1px solid $accentColr;
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+.menu-button.is-open .icon-menu {
+  display: none;
+}
