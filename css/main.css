@@ -636,7 +636,7 @@ header .container {
   }
 }
 
-.section .container.features {
+.features {
   cursor: default;
 }
 
@@ -647,6 +647,12 @@ header .container {
 .features .section-subtitle {
   margin-top: 30px;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .features .section-subtitle {
+    text-align: start;
+  }
 }
 
 .features .item {
@@ -660,6 +666,55 @@ header .container {
 .features p {
   margin-top: 10px;
   margin-bottom: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .features > .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features .item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features .item {
+    width: calc((100% - 90px) / 4);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features .list .item {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features .item:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features .item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features .item:nth-child(n + 3) {
+    margin-bottom: 0px;
+  }
 }
 
 .icon-frame {
