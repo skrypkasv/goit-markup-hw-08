@@ -1,0 +1,48 @@
+// Адресс
+.coordinates {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-basis: 50%;
+    padding-left: 60px;
+    padding-right: 85px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: 20%;
+    padding-left: 0;
+  }
+  // background-color: aquamarine;
+}
+
+.address {
+  font-style: inherit;
+}
+
+.location {
+  display: block;
+  margin-top: 20px;
+  color: $primaryWhiteColr;
+}
+
+%addresslink {
+  display: block;
+  margin-top: 9px;
+  padding: 0px;
+
+  color: $primaryTxtColr;
+  text-decoration: none;
+
+  transition: color 250ms $timeFunction;
+}
+.address .mail {
+  @extend %addresslink;
+  &:hover,
+  &:focus {
+    color: $accentColr;
+  }
+}
+.address .tel {
+  @extend %addresslink;
+  &:hover,
+  &:focus {
+    color: $accentColr;
+  }
+}

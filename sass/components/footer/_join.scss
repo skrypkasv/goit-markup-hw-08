@@ -1,0 +1,40 @@
+// Присоединяйтесь
+.join {
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-basis: 50%;
+    margin-top: 5px;
+    margin-bottom: 0;
+    padding-left: 80px;
+    padding-right: 73px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: 20%;
+    margin-top: 10px;
+    margin-bottom: 45px;
+  }
+  // background-color: aquamarine;
+}
+
+.call {
+  display: block;
+  margin-bottom: 20px;
+  color: $primaryWhiteColr;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.join .list.social {
+  display: flex;
+  justify-content: center;
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-start;
+  }
+
+  & > .item:not(:last-child) {
+    margin-right: 10px;
+  }
+}
