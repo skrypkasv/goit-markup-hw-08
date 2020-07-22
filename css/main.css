@@ -746,6 +746,12 @@ header .container {
   display: none;
 }
 
+@media screen and (min-width: 1200px) {
+  .additional {
+    display: block;
+  }
+}
+
 .list.directions {
   display: -webkit-box;
   display: -ms-flexbox;
