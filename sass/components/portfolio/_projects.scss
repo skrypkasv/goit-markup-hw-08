@@ -15,7 +15,7 @@
 
     transition: box-shadow 250ms $timeFunction;
 
-    // background-color: orange;
+    background-color: orange;
 
     @media screen and (min-width: 768px) {
       width: calc((100% - 30px) / 2);

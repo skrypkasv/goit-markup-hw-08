@@ -246,22 +246,13 @@ body.modal-open {
 .logo {
   display: block;
   cursor: pointer;
-  margin-right: 80px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 0px;
-  padding-right: 5px;
   font-family: Raleway;
   font-weight: bold;
   font-size: 24px;
   line-height: 1.2;
   text-decoration: none;
-}
-
-@media screen and (min-width: 1200px) {
-  .logo {
-    margin-right: 85px;
-  }
+  padding-left: 0px;
+  padding-right: 5px;
 }
 
 .web {
@@ -274,6 +265,23 @@ body.modal-open {
 
 .studio-bottom {
   color: #ffffff;
+}
+
+.upper.logo {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .upper.logo {
+    margin-right: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .upper.logo {
+    margin-right: 85px;
+  }
 }
 
 .menu-button {
@@ -981,6 +989,19 @@ footer {
   background-color: #2f303a;
 }
 
+@media screen and (min-width: 768px) {
+  .under {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .container .under {
   padding: 60px 0px 60px;
   text-align: center;
@@ -993,7 +1014,7 @@ footer {
 
 .location {
   display: block;
-  margin-top: 10px;
+  margin-top: 20px;
   color: #ffffff;
 }
 
@@ -1015,10 +1036,48 @@ footer {
   color: #2196f3;
 }
 
+.coordinates {
+  background-color: aquamarine;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .coordinates {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    padding-left: 60px;
+    padding-right: 85px;
+  }
+}
+
 .join {
   width: 100%;
   margin-top: 60px;
   margin-bottom: 60px;
+  background-color: aquamarine;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .join {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin-top: 5px;
+    margin-bottom: 0;
+    padding-left: 80px;
+    padding-right: 73px;
+  }
+}
+
+.subscribe {
+  background-color: aquamarine;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .subscribe {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 450px;
+    margin-top: 60px;
+  }
 }
 
 .call {
@@ -1046,11 +1105,11 @@ footer {
 
 .subscribe-field {
   display: block;
+  background-color: yellowgreen;
   padding: 15px 16px;
   width: 100%;
   height: 50px;
   margin-bottom: 20px;
-  background-color: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -1415,6 +1474,7 @@ footer {
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: orange;
 }
 
 @media screen and (min-width: 768px) {
