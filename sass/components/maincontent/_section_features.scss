@@ -15,7 +15,9 @@
     // outline: 1px solid navy;
   }
   & .item:not(:last-child) {
-    margin-bottom: 30px;
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 30px;
+    }
   }
 
   & p {
@@ -28,7 +30,6 @@
   & > .list {
     @media screen and (min-width: 768px) {
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
     }
   }
@@ -40,11 +41,7 @@
       width: calc((100% - 90px) / 4);
     }
   }
-  & .list .item {
-    @media screen and (min-width: 1200px) {
-      margin-bottom: 0px;
-    }
-  }
+
   & .item:nth-child(2n + 1) {
     @media screen and (min-width: 768px) {
       margin-right: 30px;
