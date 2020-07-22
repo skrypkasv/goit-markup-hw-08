@@ -6,29 +6,50 @@
 
 // Позиционирование в "Наша команда"
 .list.members {
-  // display: flex;
   display: block;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
   & > .item {
     display: block;
-    // width: calc((100% - 90px) / 4);
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 90px) / 4);
+    }
   }
   & > .item:not(:last-child) {
     margin-bottom: 30px;
   }
-}
-.card .list.social {
-  display: flex;
-  justify-content: center;
-  padding: 0px 32px 24px;
-
+  & > .item:nth-child(2n + 1) {
+    @media screen and (min-width: 768px) {
+      margin-right: 30px;
+    }
+  }
   & > .item:not(:last-child) {
-    margin-right: 10px;
+    @media screen and (min-width: 1200px) {
+      margin-right: 30px;
+    }
+  }
+  & > .item:nth-child(n + 3) {
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.container .list.members .item {
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0px;
   }
 }
 
 // Карточки нашей команды
 .card {
-  background-color: $primaryWhiteColr;
+  background-color: orange;
+  // background-color: $primaryWhiteColr;
 
   text-align: center;
 
@@ -55,4 +76,14 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
+}
+
+.card .list.social {
+  display: flex;
+  justify-content: center;
+  padding: 0px 32px 24px;
+
+  & > .item:not(:last-child) {
+    margin-right: 10px;
+  }
 }

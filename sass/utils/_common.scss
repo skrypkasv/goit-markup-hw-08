@@ -83,6 +83,9 @@ body.modal-open {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
   }
   &-subtitle {
     margin-top: 0px;
