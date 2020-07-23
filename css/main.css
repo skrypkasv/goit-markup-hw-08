@@ -25,6 +25,12 @@ body.modal-open {
   overflow: hidden;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .list {
   list-style: none;
   margin-top: 0px;
@@ -97,7 +103,7 @@ body.modal-open {
 
 @media screen and (min-width: 1200px) {
   .section-title {
-    margin-bottom: 50px;
+    margin-bottom: 5 0px;
   }
 }
 
@@ -696,13 +702,15 @@ header .container {
 
 @media screen and (min-width: 768px) {
   .features .item {
-    width: calc((100% - 30px) / 2);
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .features .item {
-    width: calc((100% - 90px) / 4);
+    -ms-flex-preferred-size: calc((100% - 90px) / 4);
+        flex-basis: calc((100% - 90px) / 4);
   }
 }
 
@@ -766,7 +774,8 @@ header .container {
 .directions > .item {
   position: relative;
   display: block;
-  width: calc((100% - 60px) / 3);
+  -ms-flex-preferred-size: calc((100% - 60px) / 3);
+      flex-basis: calc((100% - 60px) / 3);
 }
 
 .directions > .item:not(:last-child) {
@@ -811,13 +820,15 @@ header .container {
 
 @media screen and (min-width: 768px) {
   .list.members > .item {
-    width: calc((100% - 30px) / 2);
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .list.members > .item {
-    width: calc((100% - 90px) / 4);
+    -ms-flex-preferred-size: calc((100% - 90px) / 4);
+        flex-basis: calc((100% - 90px) / 4);
   }
 }
 
@@ -897,7 +908,8 @@ header .container {
 
 .list.companies > .item {
   display: block;
-  width: calc((100% - 30px) / 2);
+  -ms-flex-preferred-size: calc((100% - 30px) / 2);
+      flex-basis: calc((100% - 30px) / 2);
   height: 90px;
   background-color: #ffffff;
   border: 1px solid #afb1b8;
@@ -909,13 +921,15 @@ header .container {
 
 @media screen and (min-width: 768px) {
   .list.companies > .item {
-    width: calc((100% - 60px) / 3);
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .list.companies > .item {
-    width: calc((100% - 150px) / 6);
+    -ms-flex-preferred-size: calc((100% - 150px) / 6);
+        flex-basis: calc((100% - 150px) / 6);
   }
 }
 
@@ -1545,13 +1559,15 @@ footer {
 
 @media screen and (min-width: 768px) {
   .project .item {
-    width: calc((100% - 30px) / 2);
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .project .item {
-    width: calc((100% - 60px) / 3);
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
     margin-right: 30px;
   }
 }

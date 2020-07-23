@@ -5,7 +5,7 @@
 
   & > .item {
     display: block;
-    width: calc((100% - 30px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
     height: 90px;
 
     background-color: $primaryWhiteColr;
@@ -16,10 +16,10 @@
     transition: border 250ms $timeFunction;
 
     @media screen and (min-width: 768px) {
-      width: calc((100% - 60px) / 3);
+      flex-basis: calc((100% - 60px) / 3);
     }
     @media screen and (min-width: 1200px) {
-      width: calc((100% - 150px) / 6);
+      flex-basis: calc((100% - 150px) / 6);
     }
   }
   & > .item:nth-child(n + 3) {

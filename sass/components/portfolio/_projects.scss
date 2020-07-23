@@ -18,10 +18,10 @@
     background-color: orange;
 
     @media screen and (min-width: 768px) {
-      width: calc((100% - 30px) / 2);
+      flex-basis: calc((100% - 30px) / 2);
     }
     @media screen and (min-width: 1200px) {
-      width: calc((100% - 60px) / 3);
+      flex-basis: calc((100% - 60px) / 3);
       margin-right: 30px;
     }
   }
