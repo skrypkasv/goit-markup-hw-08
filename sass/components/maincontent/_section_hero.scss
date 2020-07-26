@@ -1,5 +1,7 @@
 .hero {
   max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   background-image: $lineGrad, url(../images/hero/mobil-header-img.jpg);
   background-repeat: no-repeat;
   background-position: center;
